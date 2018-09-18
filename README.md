@@ -17,7 +17,7 @@ This framework is made to facilitate data collection of startup information. One
 
 There are two ways you can contribute to this project:
 
-- Send us suggestions or edits to [gasp@preseries.com](gasp@preseries.com). It is the easiest way to contribute to the project. If your changes or ideas are accepted, your name will appear in the Authors section as “contributor”, along with a link to the social media account of your choice.
+- Send us suggestions or edits to [gasp@preseries.com](mailto:gasp@preseries.com). It is the easiest way to contribute to the project. If your changes or ideas are accepted, your name will appear in the Authors section as “contributor”, along with a link to the social media account of your choice.
 
 - Through GitHub. It is the fastest way to contribute but you need to be familiar with GitHub:
 
