@@ -1,44 +1,28 @@
-## Running FireWorks automatically
+# Generally Accepted Startup Principles (GASP)
 
-Start the Rocket Launcher so that it looks for new FireWorks every 10 seconds:
+Because there is no standard industry practice in venture capital to assess startups, we took it on ourselves to design a framework that can be used and re-used freely by anyone anywhere. The objective of this framework is to offer a common set of variables that can be derived to easily perform feature engineering tasks for machine learning. In other words, by standardizing the collection of startup data we empower investors to put that data to use, uncover insights, and not let it sit on a dusty spreadsheet, never to be looked at again. We named our framework the GASP (Generally Accepted Startup Principles), a very obvious pun on the mother of accounting standards, the GAAP.
 
-```shell
-rlaunch --config_dir ./lpad_config --launchpad_file ./lpad_config/launchpad.yaml rapidfire --nlaunches infinite --sleep 10
-```
-
-The Rocket Launcher will run them automatically and create a new directory for each job added into the LaunchPad
-
-## Rerunning a Firework or Workflow
+The GASP in its most complete form is currently represented in a 10 tab spreadsheet. Each variable is approached from a historical perspective, meaning we’re interested in the evolution of each variable over time. A detailed explanation of each variable is available in the documentation folder of the GASP GitHub repository. We open sourced the framework because we believe it’s only through collaboration and transparency that we can transform venture capital from its current subjective practice to a highly analytical one.
 
 
-## Rerunning a Firework or Workflow
+## Prerequisites
 
-You may want to rerun a Firework or Workflow when your computing resource may have crashed or been configured 
-incorrectly during the first run, leading to your first launch being FIZZLED.
+The framework is presented as a Microsoft Excel file (.xls). Several other software applications are capable of working with this type of file (Google Sheet, Open Office, etc.). However we recommend editing the document with a recent version of Microsoft Excel to avoid any compatibility issue.
 
-- Rerun specific fws
+## Usage
 
-```shell
-lpad rerun_fws --launchpad_file ./lpad_config/launchpad.yaml [-i FW_IDS] [-n NAME] [-s STATE] [-q QUERY]
-```
+This framework is made to facilitate data collection of startup information. One GASP spreadsheet equals one startup. Simply fill the empty cells with the correct values. Do not forget to change the dates in the top rows to timestamp the data collected. Values need to be entered on a monthly basis.
 
-launchpad = LaunchPad()
+## Contributing
 
+There are two ways you can contribute to this project:
 
-- Reset the LaunchPad (MongoDB)
+- Send us suggestions or edits to [gasp@preseries.com](gasp@preseries.com). It is the easiest way to contribute to the project. If your changes or ideas are accepted, your name will appear in the Authors section as “contributor”, along with a link to the social media account of your choice.
 
-```shell
-lpad --config_dir ./lpad_config --launchpad_file ./lpad_config/launchpad.yaml reset
-```
+- Through GitHub. It is the fastest way to contribute but you need to be familiar with GitHub:
 
-- Rerun a fireworl at task level, starting on the last task that caused the error
+	1. Fork the repository. Then you will have a copy of our GASP repository in your own account.
+	2. You can clone the repo in your local system and start working with the file making changes, pushing changes into your forked repo, etc.
+	3. If you want to share with us your changes in order to us modify the GASP standard, you need to perform a Pull Request
 
-```shell
-lpad rerun_fws --launchpad_file ./lpad_config/launchpad.yaml -s FIZZLED  --task-level
-```
-
-- Rerun all the FIZZLED fws
-
-```shell
-lpad rerun_fws --launchpad_file ./lpad_config/launchpad.yaml -s FIZZLED
-```
+	If you are new to GitHub, here is short illustrated guide on how to perform the steps mentioned above: [https://guides.github.com/activities/forking](https://guides.github.com/activities/forking)
